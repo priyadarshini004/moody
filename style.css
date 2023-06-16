@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(155,168,186);
+}
+nav{
+    font-family: 'Geologica', sans-serif;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    background-color: rgb(201, 225, 237);
+}
+nav ul li{
+    padding:0px 15px;
+}
+nav ul li:hover{
+    text-decoration: underline;
+}
+#logo img{
+   height:50px;
+   width :50px;
+   padding : 0px 5px;
+}
+#logo{
+    display:flex;
+   align-items: center;
+   font-size: 25px;
+}
+#container{
+    min-height: 75vh;
+    display: flex;
+    background-color:rgb(201, 225, 237) ;
+    width:85%;
+    border-radius: 10px;
+    margin:20px auto;
+    background-image: url(img\ 3.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.playButton{
+    margin:0px 10px;
+}
+
+#bottom{
+    position:sticky;
+    height:80px;
+    background-color:rgb(201, 225, 237) ;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#icons{
+    margin-top: 10px;
+}
+#icons span{
+    cursor:pointer;
+}
+#range{
+    width:70vw;
+    cursor: pointer;
+}
+#songItems{
+    margin: 20px 10px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: cursive;
+}
+
