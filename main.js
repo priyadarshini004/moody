@@ -10,13 +10,13 @@ let storedTime = 0;
 
 let songs = [
   { songName: "Baby You", filePath: "baby_you.mp3" },
-  { songName: "Perfect", filePath: "perfect.mp3" },
+  { songName: "Perfect", filePath: "Perfect.mp3" },
   { songName: "Good Parts", filePath: "good-parts.mp3" },
-  { songName: "Love My Way", filePath: "love_my_way.mp3" },
+  { songName: "Love My Way", filePath: "Love_my_way.mp3" },
   { songName: "Bom", filePath: "bom.mp3" },
   { songName: "Good Parts (speed up)", filePath: "good_parts_speed_up.mp3" },
   { songName: "Stay With Me", filePath: "stay_with_me.mp3" },
-  { songName: "Pretty's On The Inside (nightcore)", filePath: "pretty's_on_the_inside.mp3" },
+  { songName: "Pretty's On The Inside (nightcore)", filePath: "Pretty's_On_The_Inside.mp3" },
   { songName: "Love Story", filePath: "love_story.mp3" },
 ];
 
