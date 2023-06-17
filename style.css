@@ -6,6 +6,9 @@
 body{
     background-color: rgb(155,168,186);
 }
+input{
+    caret-color:rgb(155,168,186);
+}
 nav{
     font-family: 'Geologica', sans-serif;
 }
