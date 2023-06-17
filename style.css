@@ -73,7 +73,7 @@ nav ul li:hover{
     flex-direction: column;
     color: rgb(54, 53, 53);
     cursor: pointer;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
 }
 #icons{
     margin-top: 10px;
