@@ -9,20 +9,21 @@ let randomButton = document.getElementById('random');
 let storedTime = 0;
 
 let songs = [
-  { songName: "Baby You", filePath: "baby you.mp3" },
-  { songName: "Perfect", filePath: "Perfect.mp3" },
+  { songName: "Baby You", filePath: "baby_you.mp3" },
+  { songName: "Perfect", filePath: "perfect.mp3" },
   { songName: "Good Parts", filePath: "good-parts.mp3" },
-  { songName: "Love My Way", filePath: "Love my way.mp3" },
-  { songName: "Bom", filePath: "bom.mp3" },
-  { songName: "Good Parts (speed up)", filePath: "good parts speed up.mp3" },
-  { songName: "Stay With Me", filePath: "stay with me.mp3" },
-  { songName: "Pretty's On The Inside (nightcore)", filePath: "Pretty's On The Inside.mp3" },
-  { songName: "Love Story", filePath: "love story.mp3" },
+  { songName: "Love My Way", filePath: "love_my_way.mp3" },
+  { songName: "Bom", filePath: "path_to_bom.mp3" },
+  { songName: "Good Parts (speed up)", filePath: "good_parts_speed_up.mp3" },
+  { songName: "Stay With Me", filePath: "stay_with_me.mp3" },
+  { songName: "Pretty's On The Inside (nightcore)", filePath: "pretty's_on_the_inside.mp3" },
+  { songName: "Love Story", filePath: "love_story.mp3" },
 ];
 
 function playSong(index) {
   audio.src = songs[index].filePath;
   audio.currentTime = storedTime;
+  displaySongName(songs[index].songName);
   audio.play();
   changeButtonIcon(index, 'pause_circle');
   changeButtonIconBottom('pause_circle');
@@ -76,10 +77,16 @@ randomButton.addEventListener('click', () => {
   changeButtonIconBottom('play_circle');
   songIndex = randomIndex;
   storedTime=0;
+  displaySongName(songs[songIndex].songName);
   playSong(songIndex);
   changeButtonIcon(songIndex, 'pause_circle');
   changeButtonIconBottom('pause_circle');
 });
+
+function displaySongName(name) {
+  document.getElementById('songName').innerHTML = name;
+  console.log(name);
+}
 
 Array.from(playButtons).forEach((button, index) => {
   button.addEventListener('click', () => {
@@ -98,7 +105,6 @@ Array.from(playButtons).forEach((button, index) => {
       pauseSong();
       changeButtonIcon(index, 'play_circle');
       changeButtonIconBottom('play_circle');
-      
     }
     else {
       playSong(index);
@@ -127,7 +133,6 @@ playPauseButton.addEventListener('click', () => {
     changeButtonIcon(songIndex, 'pause_circle');
   }
 });
-
 
 audio.addEventListener('timeupdate', () => {
   const value = (audio.currentTime / audio.duration) * 100;
