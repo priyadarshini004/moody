@@ -51,12 +51,14 @@ function playNextSong() {
 }
 
 backwardButton.addEventListener('click', () => {
+  changeButtonIcon(songIndex,'play_circle');
   songIndex = (songIndex - 1 + songs.length) % songs.length;
   storedTime = 0;
   playSong(songIndex);
 });
 
 forwardButton.addEventListener('click', () => {
+  changeButtonIcon(songIndex,'play_circle');
   songIndex = (songIndex + 1) % songs.length;
   storedTime = 0;
   playSong(songIndex);
