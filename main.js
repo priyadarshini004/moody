@@ -5,6 +5,7 @@ let progress = document.getElementById('range');
 let backwardButton = document.getElementById('backward');
 let playPauseButton = document.getElementById('playPause');
 let forwardButton = document.getElementById('forward');
+let randomButton = document.getElementById('random');
 let storedTime = 0;
 
 let songs = [
@@ -62,6 +63,22 @@ forwardButton.addEventListener('click', () => {
   songIndex = (songIndex + 1) % songs.length;
   storedTime = 0;
   playSong(songIndex);
+});
+
+randomButton.addEventListener('click', () => {
+  const previousIcon = songIndex;
+  let randomIndex;
+  do {
+    randomIndex = Math.floor(Math.random() * songs.length);
+  } while (randomIndex === songIndex);
+  pauseSong();
+  changeButtonIcon(songIndex, 'play_circle');
+  changeButtonIconBottom('play_circle');
+  songIndex = randomIndex;
+  storedTime=0;
+  playSong(songIndex);
+  changeButtonIcon(songIndex, 'pause_circle');
+  changeButtonIconBottom('pause_circle');
 });
 
 Array.from(playButtons).forEach((button, index) => {
